@@ -10,43 +10,63 @@
   <meta property="og:image" content="https://www.nicklovesrosie.co.uk/images/mail-rail.thumb.jpg">
   <meta property="og:description" content="6th April 2019">
   <meta property="og:url" content="https://www.nicklovesrosie.co.uk">
-
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"> -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-
+  <meta name="Description" content="Nick & Rosie get married, 6th April 2019">
 
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+
     body {
-      background-color: #F0FAE4;
+      background-color: #F9FDF5;
       color: #324624;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       margin: 30px;
       font-size: 16px;
     }
 
     h1,
     h2 {
-      margin: 0 0 0.2em;
+      font-family: 'Lato', 'Helvetica Neue', sans-serif;
+      margin: 0 0 0.15em;
       color: #324624;
       display: inline-block;
-      padding-bottom: 0.2em;
+      padding-bottom: 0.1em;
     }
 
     h1 {
-      font-size: 4em;
+      font-size: 6vw;
       border-bottom: 5px solid #EC5D73;
+    }
+
+    @media screen and (min-width: 1000px) {
+      /* Stop font growing forever! */
+      h1 {
+        font-size: 4em;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1,
+      h2 {
+        display: block;
+      }
+      h1 {
+        font-size: 2.3em;
+      }
     }
 
     h2 {
       border-bottom: 3px solid #88B04B;
-      /* Flow between body sections */
-      margin-top: 1em;
+    }
+
+    header,
+    section {
+      margin-bottom: 2em;
     }
 
     p {
       max-width: 800px;
       line-height: 1.6em;
+      margin-top: 0.4em;
     }
 
     ul.briefs li {
@@ -61,53 +81,70 @@
       display: inline;
       font-style: normal;
     }
+
+    .separator {
+      margin: 0 10px;
+    }
+
+    .separator::before {
+      content: "/"
+    }
   </style>
 </head>
 
 <body>
-  <h1>Nick & Rosie are getting married!</h1>
-  <ul class="fa-ul briefs">
-    <li class="condensed">
-      <span class="fa-li">
-        <i class="fas fa-map-marker-alt"></i>
-      </span>
-      <address>
-        South Place Hotel, Moorgate, London EC2M 2AF
-      </address>
-    </li>
-    <li class="condensed">
-      <a href="https://goo.gl/maps/oodL1ojhFJt" target="_blank"><i class="fas fa-external-link-alt"></i>
-        Find on a map</a>
-    </li>
-    <li>
-      <a href="https://southplacehotel.com/transport/" target="_blank"><i class="fas fa-external-link-alt"></i>
-        Getting there (South Place Hotel website)</a>
-    </li>
-    <li>
-      <span class="fa-li">
-        <i class="far fa-calendar-alt"></i>
-      </span>
-      <time datetime="2019-04-06">6th April, 2019</time>
-    </li>
-    <li>
-      <span class="fa-li">
-        <i class="far fa-clock"></i>
-      </span>
-      Ceremony 1:00pm / Evening, 7:00pm
-    </li>
-  </ul>
+  <header>
+    <h1>Nick & Rosie are getting married!</h1>
+    <ul class="fa-ul briefs">
+      <li class="condensed">
+        <span class="fa-li">
+          <i class="fas fa-map-marker-alt"></i>
+        </span>
+        <address>
+          South Place Hotel, Moorgate, London EC2M 2AF
+        </address>
+      </li>
+      <li class="condensed">
+        <a href="https://goo.gl/maps/oodL1ojhFJt" target="_blank"><i class="fas fa-external-link-alt"></i>
+          Find on a map</a>
+      </li>
+      <li>
+        <a href="https://southplacehotel.com/transport/" target="_blank"><i class="fas fa-external-link-alt"></i>
+          Getting there (South Place Hotel website)</a>
+      </li>
+      <li>
+        <span class="fa-li">
+          <i class="far fa-calendar-alt"></i>
+        </span>
+        <time datetime="2019-04-06">6th April, 2019</time>
+      </li>
+      <li>
+        <span class="fa-li">
+          <i class="far fa-clock"></i>
+        </span>
+        Ceremony <time datetime="2019-04-06 13:00:00">1:00pm</time> <span class="separator"></span> Evening <time datetime="2019-04-06 19:00:00">7:00pm</time>
+      </li>
+    </ul>
+  </header>
 
-  <h2>Accommodation</h2>
-  <p>If you can, we recommend staying at South Place, because the entire event will be happening there.</p>
-  <p>We have a group booking rate for King size rooms, £175/night (either Saturday evening, or both Friday & Saturday), this
-    is available by calling <a href="tel:00442035030000"><i class="fas fa-phone"></i>
-      02035030000</a>
-    and referencing our names.</p>
+  <section>
+    <h2>Accommodation</h2>
+    <p>If you can, we recommend staying at South Place. We have a group booking rate for king rooms, £175/night (either Saturday
+      evening, or both Friday & Saturday), this is available by calling <a style="white-space: nowrap" href="tel:00442035030000"><i
+          class="fas fa-phone"></i>
+        02035030000</a>
+      and referencing our names.</p>
+  </section>
 
-  <h2>RSVP</h2>
-  <p>
-    <em>Coming soon</em>
-  </p>
+  <section>
+    <h2>RSVP</h2>
+    <p>
+      <em>Coming soon</em>
+    </p>
+  </section>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+
 </body>
 
 </html>
