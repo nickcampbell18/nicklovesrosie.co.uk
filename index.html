@@ -11,30 +11,34 @@
   <meta property="og:description" content="6th April 2019">
   <meta property="og:url" content="https://www.nicklovesrosie.co.uk">
   <meta name="Description" content="Nick & Rosie get married, 6th April 2019">
+  <meta name="theme-color" content="#EC5D73">
 
   <style>
-    @import url('https://fonts.googleapis.com/css?family=Lato');
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      margin: 0 auto;
+      max-width: 1600px;
+    }
 
     body {
-      background-color: #F9FDF5;
+      background-color: #eaeaea;
       color: #324624;
-      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 30px;
+      font-family: 'Roboto Slab', sans-serif;
+      margin: 0;
       font-size: 16px;
     }
 
     h1,
     h2 {
-      font-family: 'Lato', 'Helvetica Neue', sans-serif;
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: normal;
       margin: 0 0 0.15em;
-      color: #324624;
-      display: inline-block;
       padding-bottom: 0.1em;
-    }
-
-    h1 {
-      font-size: 6vw;
-      border-bottom: 5px solid #EC5D73;
     }
 
     a:visited {
@@ -47,33 +51,8 @@
       text-decoration: none;
     }
 
-    @media screen and (min-width: 1000px) {
-
-      /* Stop font growing forever! */
-      h1 {
-        font-size: 4em;
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-
-      h1,
-      h2 {
-        display: block;
-      }
-
-      h1 {
-        font-size: 2.3em;
-      }
-    }
-
     h2 {
-      border-bottom: 3px solid #88B04B;
-    }
-
-    header,
-    section {
-      margin-bottom: 2em;
+      border-bottom: 3px solid #EC5D73;
     }
 
     p {
@@ -106,88 +85,160 @@
     .separator.extends::before {
       content: ">"
     }
+
+    header.hero {
+      background:
+        linear-gradient(90deg, rgba(236, 93, 115, 0.4),
+        rgba(0, 0, 0, 0)), url('/images/hero2.jpg') right center no-repeat;
+      background-size: cover;
+      min-height: 500px;
+      width: 100%;
+    }
+
+    header.hero h1 {
+      color: white;
+      border: none;
+      padding: 180px 0 0 20px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+      margin: 0;
+      max-width: 50%;
+    }
+
+    .flex-grid {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .flex-grid>section {
+      flex: 1;
+      padding: 30px;
+      background-color: #fff;
+    }
+
+    @media screen and (min-width: 1000px) {
+
+      /* Stop font growing forever! */
+      h1 {
+        font-size: 4em;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+
+      h1,
+      h2 {
+        display: block;
+      }
+
+      h1 {
+        font-size: 2.3em;
+      }
+
+      header.hero {
+        min-height: 20vh;
+        padding: 10px 0;
+      }
+
+      header.hero h1 {
+        padding-top: 10px;
+      }
+
+      .flex-grid {
+        display: block;
+      }
+
+      .flex-grid>section {
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <header>
+  <header class="hero">
     <h1>Nick & Rosie are getting married!</h1>
-    <ul class="fa-ul briefs">
-      <li class="condensed">
-        <span class="fa-li">
-          <i class="fas fa-map-marker-alt"></i>
-        </span>
-        <address>
-          South Place Hotel, Moorgate, London EC2M 2AF
-        </address>
-      </li>
-      <li class="condensed">
-        <a href="https://goo.gl/maps/oodL1ojhFJt" target="_blank">
-          Find on a map <i class="fas fa-external-link-alt"></i></a>
-      </li>
-      <li>
-        <a href="https://southplacehotel.com/transport/" target="_blank">
-          Getting there (South Place Hotel website) <i class="fas fa-external-link-alt"></i></a>
-      </li>
-      <li>
-        <span class="fa-li">
-          <i class="far fa-calendar-alt"></i>
-        </span>
-        <time datetime="2019-04-06">6th April, 2019</time>
-      </li>
-      <li>
-        <span class="fa-li">
-          <i class="far fa-clock"></i>
-        </span>
-        Ceremony <time datetime="2019-04-06 13:00:00">1:00pm</time> <span class="separator"></span> Evening <time
-          datetime="2019-04-06 19:00:00">7:00pm</time>
-      </li>
-    </ul>
   </header>
 
-  <section>
-    <h2>Accommodation</h2>
+  <article class="flex-grid">
+    <section>
+      <h2>Venue</h2>
+      <ul class="fa-ul briefs">
+        <li class="condensed">
+          <span class="fa-li">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <address>
+            South Place Hotel, Moorgate, London EC2M 2AF
+          </address>
+        </li>
+        <li class="condensed">
+          <a href="https://goo.gl/maps/oodL1ojhFJt" target="_blank" rel="noreferrer">
+            Find on a map <i class="fas fa-external-link-alt"></i></a>
+        </li>
+        <li>
+          <a href="https://southplacehotel.com/transport/" target="_blank" rel="noreferrer">
+            Getting there (South Place Hotel website) <i class="fas fa-external-link-alt"></i></a>
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="far fa-calendar-alt"></i>
+          </span>
+          <time datetime="2019-04-06">6th April, 2019</time>
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="far fa-clock"></i>
+          </span>
+          Ceremony <time datetime="2019-04-06 13:00:00">1:00pm</time> <span class="separator"></span> Evening <time
+            datetime="2019-04-06 19:00:00">7:00pm</time>
+        </li>
+      </ul>
+    </section>
 
-    <ol>
-      <li>
-        <p class="condensed">
-          <strong>South Place Hotel (recommended)</strong> <a style="white-space: nowrap" href="tel:00442035030000"><i
-              class="fas fa-phone"></i>
-            02035030000</a>
-        </p>
-        <p>We have a group booking rate for king rooms of £175/night (either Saturday
-          evening, or both Friday & Saturday), this is available by calling
-          &amp; referencing our names.</p>
-      </li>
-      <li>
-        <p class="condensed"><strong>Travelodge London Central City Road</strong> <a href="https://www.travelodge.co.uk/hotels/340/London-Central-City-Road-hotel?checkIn=06%2F04%2F19&checkOut=07%2F04%2F19&rooms%5B0%5D%5Badults%5D=2&rooms%5B0%5D%5Bchildren%5D=0&rooms%5B0%5D%5Bextras%5D%5B0%5D=&lozenges="
-            target="_blank">Website <i class="fas fa-external-link-alt"></i></a>
-        </p>
-        <p>
-          <span><i class="fas fa-walking" title="Walking time"></i> 5 mins</span>
-          <span class="separator"></span>
-          <span><i class="fas fa-taxi" title="Taxi time"></i> 1 minute</span>
-        </p>
-      </li>
-      <li>
-        <p class="condensed"><strong>Premier Inn Old Street</strong> <a href="https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-city-old-street.html?INNID=LONOLD&ARRdd=06&ARRmm=04&ARRyyyy=2019&NIGHTS=1&ROOMS=1&ADULT1=2&CHILD1=0&COT1=0&INTTYP1=DB&SID=4&ISH=true&BRAND=PI&CID=GHF_GB_mapresults_desktop_LONOLD"
-            target="_blank">Website <i class="fas fa-external-link-alt"></i></a>
-        </p>
-        <p>
-          <span><i class="fas fa-walking" title="Walking time"></i> 15 mins</span>
-          <span class="separator"></span>
-          <span><i class="fas fa-taxi" title="Taxi time"></i> 5 minutes</span>
-        </p>
-      </li>
-    </ol>
-  </section>
+    <section>
+      <h2>Accommodation</h2>
 
-  <section>
-    <h2>RSVP</h2>
-    <p>
-      <em>Coming soon</em>
-    </p>
-  </section>
+      <ol>
+        <li>
+          <p class="condensed">
+            <strong>South Place Hotel (recommended)</strong> <a style="white-space: nowrap" href="tel:00442035030000"><i
+                class="fas fa-phone"></i>
+              02035030000</a>
+          </p>
+          <p>We have a group booking rate for king rooms of £175/night (either Saturday
+            evening, or both Friday & Saturday), this is available by calling
+            &amp; referencing our names.</p>
+        </li>
+        <li>
+          <p class="condensed"><strong>Travelodge London Central City Road</strong> <a href="https://www.travelodge.co.uk/hotels/340/London-Central-City-Road-hotel?checkIn=06%2F04%2F19&checkOut=07%2F04%2F19&rooms%5B0%5D%5Badults%5D=2&rooms%5B0%5D%5Bchildren%5D=0&rooms%5B0%5D%5Bextras%5D%5B0%5D=&lozenges="
+              target="_blank" rel="noreferrer">Website <i class="fas fa-external-link-alt"></i></a>
+          </p>
+          <p>
+            <span><i class="fas fa-walking" title="Walking time"></i> 5 mins</span>
+            <span class="separator"></span>
+            <span><i class="fas fa-taxi" title="Taxi time"></i> 1 minute</span>
+          </p>
+        </li>
+        <li>
+          <p class="condensed"><strong>Premier Inn Old Street</strong> <a href="https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-city-old-street.html?INNID=LONOLD&ARRdd=06&ARRmm=04&ARRyyyy=2019&NIGHTS=1&ROOMS=1&ADULT1=2&CHILD1=0&COT1=0&INTTYP1=DB&SID=4&ISH=true&BRAND=PI&CID=GHF_GB_mapresults_desktop_LONOLD"
+              target="_blank" rel="noreferrer">Website <i class="fas fa-external-link-alt"></i></a>
+          </p>
+          <p>
+            <span><i class="fas fa-walking" title="Walking time"></i> 15 mins</span>
+            <span class="separator"></span>
+            <span><i class="fas fa-taxi" title="Taxi time"></i> 5 minutes</span>
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>RSVP</h2>
+      <p>
+        <em>Coming soon!</em>
+      </p>
+    </section>
+  </article>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
   <!-- Global site tag (gtag.js) - Google Analytics -->
