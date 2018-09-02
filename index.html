@@ -37,7 +37,18 @@
       border-bottom: 5px solid #EC5D73;
     }
 
+    a:visited {
+      color: navy;
+    }
+
+    a i.fa-external-link-alt {
+      font-size: 0.9em;
+      margin-left: 0.2em;
+      text-decoration: none;
+    }
+
     @media screen and (min-width: 1000px) {
+
       /* Stop font growing forever! */
       h1 {
         font-size: 4em;
@@ -45,10 +56,12 @@
     }
 
     @media screen and (max-width: 600px) {
+
       h1,
       h2 {
         display: block;
       }
+
       h1 {
         font-size: 2.3em;
       }
@@ -69,11 +82,11 @@
       margin-top: 0.4em;
     }
 
-    ul.briefs li {
+    li {
       margin-bottom: 10px;
     }
 
-    ul.briefs li.condensed {
+    .condensed {
       margin-bottom: 5px;
     }
 
@@ -88,6 +101,10 @@
 
     .separator::before {
       content: "/"
+    }
+
+    .separator.extends::before {
+      content: ">"
     }
   </style>
 </head>
@@ -105,12 +122,12 @@
         </address>
       </li>
       <li class="condensed">
-        <a href="https://goo.gl/maps/oodL1ojhFJt" target="_blank"><i class="fas fa-external-link-alt"></i>
-          Find on a map</a>
+        <a href="https://goo.gl/maps/oodL1ojhFJt" target="_blank">
+          Find on a map <i class="fas fa-external-link-alt"></i></a>
       </li>
       <li>
-        <a href="https://southplacehotel.com/transport/" target="_blank"><i class="fas fa-external-link-alt"></i>
-          Getting there (South Place Hotel website)</a>
+        <a href="https://southplacehotel.com/transport/" target="_blank">
+          Getting there (South Place Hotel website) <i class="fas fa-external-link-alt"></i></a>
       </li>
       <li>
         <span class="fa-li">
@@ -122,18 +139,47 @@
         <span class="fa-li">
           <i class="far fa-clock"></i>
         </span>
-        Ceremony <time datetime="2019-04-06 13:00:00">1:00pm</time> <span class="separator"></span> Evening <time datetime="2019-04-06 19:00:00">7:00pm</time>
+        Ceremony <time datetime="2019-04-06 13:00:00">1:00pm</time> <span class="separator"></span> Evening <time
+          datetime="2019-04-06 19:00:00">7:00pm</time>
       </li>
     </ul>
   </header>
 
   <section>
     <h2>Accommodation</h2>
-    <p>If you can, we recommend staying at South Place. We have a group booking rate for king rooms, £175/night (either Saturday
-      evening, or both Friday & Saturday), this is available by calling <a style="white-space: nowrap" href="tel:00442035030000"><i
-          class="fas fa-phone"></i>
-        02035030000</a>
-      and referencing our names.</p>
+
+    <ol>
+      <li>
+        <p class="condensed">
+          <strong>South Place Hotel (recommended)</strong> <a style="white-space: nowrap" href="tel:00442035030000"><i
+              class="fas fa-phone"></i>
+            02035030000</a>
+        </p>
+        <p>We have a group booking rate for king rooms of £175/night (either Saturday
+          evening, or both Friday & Saturday), this is available by calling
+          &amp; referencing our names.</p>
+      </li>
+      <li>
+        <p class="condensed"><strong>Travelodge London Central City Road</strong> <a href="https://www.travelodge.co.uk/hotels/340/London-Central-City-Road-hotel?checkIn=06%2F04%2F19&checkOut=07%2F04%2F19&rooms%5B0%5D%5Badults%5D=2&rooms%5B0%5D%5Bchildren%5D=0&rooms%5B0%5D%5Bextras%5D%5B0%5D=&lozenges="
+            target="_blank">Website <i class="fas fa-external-link-alt"></i></a>
+        </p>
+        <p>
+          <span><i class="fas fa-walking" title="Walking time"></i> 5 mins</span>
+          <span class="separator"></span>
+          <span><i class="fas fa-taxi" title="Taxi time"></i> 1 minute</span>
+        </p>
+      </li>
+      <li>
+        <p class="condensed"><strong>Premier Inn Old Street</strong> <a href="https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-city-old-street.html?INNID=LONOLD&ARRdd=06&ARRmm=04&ARRyyyy=2019&NIGHTS=1&ROOMS=1&ADULT1=2&CHILD1=0&COT1=0&INTTYP1=DB&SID=4&ISH=true&BRAND=PI&CID=GHF_GB_mapresults_desktop_LONOLD"
+            target="_blank">Website <i class="fas fa-external-link-alt"></i></a>
+        </p>
+        <p>
+          <span><i class="fas fa-walking" title="Walking time"></i> 15 mins</span>
+          <span class="separator"></span>
+          <span><i class="fas fa-taxi" title="Taxi time"></i> 5 minutes</span>
+        </p>
+      </li>
+    </ol>
   </section>
 
   <section>
